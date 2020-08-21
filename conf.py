@@ -8,6 +8,7 @@ source_dir = "../src/"
 build_dir = "../dist/"
 index_page_size = 10
 archives_page_size = 20
+template = "Galileo"
 enable_jsdelivr = {
     "enabled": True,
     "repo": "sourbell/meme.github.io@gh-pages"
