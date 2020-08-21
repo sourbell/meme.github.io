@@ -4,7 +4,7 @@ title: 关于
 slug: about
 date: 2020-08-21 13:09:00
 status: publish
-author: BristleTail
+author: Bristletail
 categories:
   - Meme
 tags:
