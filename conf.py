@@ -3,12 +3,11 @@
 """
 
 # For Maverick
-site_prefix = "https://meme.sourbell.im/"
+site_prefix = "https://memo.sourbell.im/"
 source_dir = "../src/"
 build_dir = "../dist/"
 index_page_size = 10
 archives_page_size = 20
-template = "Kepler"
 enable_jsdelivr = {
     "enabled": True,
     "repo": "sourbell/meme.github.io@gh-pages"
