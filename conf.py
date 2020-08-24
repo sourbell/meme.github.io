@@ -10,13 +10,13 @@ index_page_size = 10
 archives_page_size = 20
 enable_jsdelivr = {
     "enabled": True,
-    "repo": "sourbell/meme.github.io@gh-pages"
+    "repo": "sourbell/memo.github.io@gh-pages"
 }
 
 # 站点设置
 site_name = "豪猪尾巴"
 site_logo = "${static_prefix}logo.jpg"
-site_build_date = "2019-12-24T23:19+08:00"
+site_build_date = "2020-08-21T12:19+08:00"
 author = "Bristletail"
 email = "i@sourbell.im"
 author_homepage = "https://sourbell.im"
