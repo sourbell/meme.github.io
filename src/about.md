@@ -6,7 +6,7 @@ date: 2020-08-21 13:09:00
 status: publish
 author: Bristletail
 categories:
-  - Meme
+  - Memo
 tags:
   - theme
 ---
