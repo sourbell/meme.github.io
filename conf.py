@@ -10,7 +10,7 @@ index_page_size = 10
 archives_page_size = 20
 enable_jsdelivr = {
     "enabled": True,
-    "repo": "sourbell/memo.github.io@gh-pages"
+    "repo": "sourbell/meme.github.io@gh-pages"
 }
 
 # 站点设置
