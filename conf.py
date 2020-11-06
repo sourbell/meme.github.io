@@ -3,7 +3,7 @@
 """
 
 # For Maverick
-site_prefix = "https://memo.sourbell.im/"
+site_prefix = "https://toby.junli.de/"
 source_dir = "../src/"
 build_dir = "../dist/"
 index_page_size = 10
