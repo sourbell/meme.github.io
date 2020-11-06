@@ -6,7 +6,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
 
     <url>
-        <loc>https://memo.sourbell.im/about/</loc>
+        <loc>https://toby.junli.de/about/</loc>
         <lastmod>2020-08-21</lastmod>
         <changefreq>always</changefreq>
         <priority>0.8</priority>
@@ -14,21 +14,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 
     <url>
-        <loc>https://memo.sourbell.im/archives/2020-10/</loc>
+        <loc>https://toby.junli.de/archives/2020-10/</loc>
         <lastmod>2020-10-22</lastmod>
         <changefreq>always</changefreq>
         <priority>0.5</priority>
     </url>
 
     <url>
-        <loc>https://memo.sourbell.im/archives/2020-09/</loc>
+        <loc>https://toby.junli.de/archives/2020-09/</loc>
         <lastmod>2020-09-07</lastmod>
         <changefreq>always</changefreq>
         <priority>0.5</priority>
     </url>
 
     <url>
-        <loc>https://memo.sourbell.im/archives/2020-08/</loc>
+        <loc>https://toby.junli.de/archives/2020-08/</loc>
         <lastmod>2020-08-21</lastmod>
         <changefreq>always</changefreq>
         <priority>0.5</priority>
