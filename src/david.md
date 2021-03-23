@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 大卫
-slug: 2021-03
+slug: david
 date: 2021-3-22 10:29
 status: publish
 author: Toby Bu
