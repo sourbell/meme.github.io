@@ -23,7 +23,7 @@ author_homepage = "https://sourbell.im"
 description = "Keep resolutions"
 key_words = ['Maverick', 'sourbell', 'Bristletail', 'blog']
 language = 'english'
-background_img = '${static_prefix}bg/photo-1575892935016-d97e79254d93.jpg'
+background_img = ''
 external_links = [
     {
         "name": "小花的架子鼓",
