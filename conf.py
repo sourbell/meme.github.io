@@ -14,7 +14,7 @@ enable_jsdelivr = {
 }
 
 # 站点设置
-site_name = "豪猪尾巴"
+site_name = "Bristletail || Bristle Tail"
 site_logo = "${static_prefix}logo.jpg"
 site_build_date = "2020-08-21T12:19+08:00"
 author = "Bristletail"
