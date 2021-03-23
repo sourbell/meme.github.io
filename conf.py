@@ -39,7 +39,7 @@ nav = [
     },
     {
         "name": "归档",
-        "url": "${site_prefix}archives/",
+        "url": "${site_prefix}memos/",
         "target": "_self"
     },
     {
