@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
 from .Metadata import Metadata
+from .Markdown import Markdown
 from .Utils import safe_read
-from .Renderer import Renderer
+from .Config import g_conf
 
 import re
 import yaml
-import codecs
 
 
 def group_by_tagname(tag):
@@ -17,7 +17,8 @@ def group_by_tagname(tag):
 
 def group_by_category(category):
     def criteria(content):
-        return category in content.get_meta('categories')
+        # direct category
+        return category == content.get_meta('categories')[-1]
     return criteria
 
 
@@ -42,17 +43,36 @@ class Content():
     @property
     def excerpt(self):
         if self._excerpt is None:
-            self._excerpt = Renderer.excerpt(self)
+            def strip(text):
+                    r = re.compile(r'<[^>]+>', re.S)
+                    return r.sub('', text)
+
+            output = self.get_meta("excerpt")
+            if output != "" and output != "None":
+                return output
+
+            # find <!--more-->
+            index = self.parsed.find('<!--more-->')
+            if index != -1:
+                output = strip(self.parsed[:index])
+            else:
+                output = strip(self.parsed)
+                output = output[:output.find('\n')]
+            self._excerpt = output
+
         return self._excerpt
 
     @property
     def parsed(self):
         if self._parsed is None:
-            self._parsed = Renderer.markdown(self)
+            self._parsed = Markdown(self)
         return self._parsed
 
     def get_meta(self, key, default=None):
         return self.meta.get(key, default)
+
+    def update_meta(self, key, value):
+        self.meta[key] = value
 
     @staticmethod
     def cmp_by_date(content_1, content_2):

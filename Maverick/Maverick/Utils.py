@@ -1,12 +1,16 @@
 # -*- coding: utf-8 -*-
 
 import os
+import re
 import shutil
 import codecs
 import hashlib
 import chardet
 import json
+import stat
+import subprocess
 from .Config import g_conf
+from .Router import Router
 from enum import Enum
 
 
@@ -24,6 +28,12 @@ class Color(Enum):
 def print_color(text: str, fg: Color = Color.BLACK.value, end='\n'):
     print('\033[%sm%s\033[0m' % (fg, text), end=end)
 
+def run(command, cwd):
+    with subprocess.Popen(command, cwd=cwd, shell=True) as ret:
+        ret.wait()
+        if ret.returncode != 0:
+            ret.kill()
+            raise BaseException
 
 def logged_func(delim='\n'):
     def inner(func):
@@ -45,6 +55,17 @@ def copytree(src, dst, syamlinks=False, ignore=None):
             shutil.copy2(s, d)
 
 
+def force_rmtree(top):
+    for root, dirs, files in os.walk(top, topdown=False):
+        for name in files:
+            filename = os.path.join(root, name)
+            os.chmod(filename, stat.S_IWUSR)
+            os.remove(filename)
+        for name in dirs:
+            os.rmdir(os.path.join(root, name))
+    os.rmdir(top)
+
+
 def log_start(message, delim):
     print_color('Start ' + message, Color.YELLOW.value, end='...'+delim)
 
@@ -64,7 +85,7 @@ def safe_write(path, content, codec="utf-8"):
 def safe_read(path):
     if not os.path.exists(path):
         return ""
-    
+
     # utf-8 is prefered
     try:
         with open(path, 'r', encoding='utf-8') as f:
@@ -87,17 +108,42 @@ def unify_joinpath(left, right):
     return path.replace('\\', '/')
 
 
-g_translation = None
+def filterPlaceholders(content):
+    """replace content like ${key} to corresponding value
 
-
-def tr(str, locale="english"):
-    """translation support
-
-    translate str according to translation file
+    1. search key in env
+    2. search key in config
     """
-    global g_translation
-    if g_translation is None:
-        path = unify_joinpath('./locale', g_conf.language+".json")
-        g_translation = json.loads(safe_read(path) or '{}')
+    pattern = re.compile(r'[\s\S]*?\$\{([\s\S]*?)\}')
+    router = Router(g_conf)
 
-    return g_translation.get(str, str)
+    def getKey(str):
+        m = pattern.match(str)
+        if not m is None:
+            return m.group(1)
+        else:
+            return None
+
+    while True:
+        key = getKey(content)
+        if key is None:
+            break
+
+        search_str = '${%s}' % key
+        value = ''
+        if key == "static_prefix":
+            value = router.gen_static_file_prefix()
+        else:
+            # find in os.env
+            value = os.getenv(key, None)
+            if value is None:
+                # find in config
+                try:
+                    value = getattr(g_conf, key)
+                except AttributeError:
+                    pass
+
+        # replace
+        content = content.replace(search_str, str(value), 1)
+
+    return content
