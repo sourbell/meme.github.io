@@ -22,7 +22,8 @@ email = "i@sourbell.im"
 author_homepage = "https://sourbell.im"
 description = "Keep resolutions"
 key_words = ['Maverick', 'sourbell', 'Bristletail', 'blog']
-language = 'english'
+language = 'chinese'
+locale = 'Asia/Shanghai'
 background_img = ''
 external_links = [
     {
