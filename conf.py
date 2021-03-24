@@ -49,6 +49,13 @@ nav = [
     }
 ]
 
+valine = {
+    "enable": True,
+    "el": '#vcomments',
+    "appId": "X5qiy62TtnWiqWRM7tnsnrnl-9Nh9j0Va",
+    "appKey": "ERjI9kNprFRou6YbfXyftEG5",
+}
+
 social_links = [
     {
         "name": "Twitter",
