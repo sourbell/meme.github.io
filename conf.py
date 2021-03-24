@@ -27,7 +27,7 @@ background_img = ''
 external_links = [
     {
         "name": "小花的架子鼓",
-        "url": "http://junli.de/",
+        "url": "https://blog.junli.de/",
         "brief": "🌵Julie 的部落格 🌵"
     }
 ]
