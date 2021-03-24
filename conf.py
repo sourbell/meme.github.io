@@ -54,7 +54,7 @@ valine = {
     "el": '#vcomments',
     "appId": "X5qiy62TtnWiqWRM7tnsnrnl-9Nh9j0Va",
     "appKey": "ERjI9kNprFRou6YbfXyftEG5",
-    "visitor": True,
+    "visitor": "True",
     "recordIP": True
 }
 
