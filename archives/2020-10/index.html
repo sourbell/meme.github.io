@@ -7,17 +7,19 @@
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content="Maverick,sourbell,Bristletail,blog" />
-    <meta name="generator" content="Maverick 1.0" />
+    <meta name="generator" content="Maverick 1.1" />
     <meta name="template" content="Galileo" />
     <link rel="alternate" type="application/rss+xml" title="Bristle Tail &raquo; RSS 2.0" href="https://toby.junli.de/feed/index.xml" />
     <link rel="alternate" type="application/atom+xml" title="Bristle Tail &raquo; ATOM 1.0" href="https://toby.junli.de/feed/atom/index.xml" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sourbell/meme.github.io@gh-pages/assets/galileo-ec40839efa.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sourbell/meme.github.io@gh-pages/assets/galileo-8d8763e752.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sourbell/meme.github.io@gh-pages/assets/ExSearch/ExSearch-182e5a8868.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sourbell/meme.github.io@gh-pages/assets/katex.min.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700&display=swap">
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/sourbell/meme.github.io@gh-pages/615610466231dc74b8adafece83fe323.json"
+            api: "https://cdn.jsdelivr.net/gh/sourbell/meme.github.io@gh-pages/9d4e1a993e2f962ba49bb37234b98e28.json"
         }
     </script>
     
@@ -50,11 +52,6 @@
         <div class="container">
             <header id="ga-header">
                 <div first>
-                    <aside id="ga-logo">
-                        <a href="https://toby.junli.de/" target="_self">
-                            <img src="https://cdn.jsdelivr.net/gh/sourbell/meme.github.io@gh-pages/logo.jpg" alt="Bristle Tail">
-                        </a>
-                    </aside>
                     <aside id="ga-brand">
                         <h1 class="brand"><a class="no-style" href="https://toby.junli.de/">Bristle Tail</a></h1>
                         <p>Keep resolutions</p>
@@ -63,9 +60,6 @@
                 <div second id="ga-nav">
                     <nav class="navs">
                         <ul><li><a class="ga-highlight" href="https://toby.junli.de/" target="_self">首页</a></li><span class="separator">·</span><li><a class="ga-highlight" href="https://toby.junli.de/archives/" target="_self">归档</a></li><span class="separator">·</span><li><a class="ga-highlight" href="https://toby.junli.de/about/" target="_self">关于</a></li><span class="separator">·</span><li><a href="#" target="_self" class="search-form-input ga-highlight">Search</a></li></ul>
-                    </nav>
-                    <nav class="social-links">
-                        <ul><li><a class="no-style" title="Twitter" href="https://twitter.com/sourbell" target="_blank"><i class="fab fa-twitter"></i>Twitter</a></li><span class="separator">·</span><li><a class="no-style" title="GitHub" href="https://github.com/sourbell" target="_blank"><i class="fab fa-github-alt"></i>GitHub</a></li><span class="separator">·</span><li><a class="no-style" title="Steam" href="https://steamcommunity.com/id/sourbell/" target="_blank"><i class="fab fa-steam-symbol"></i>Steam</a></li><span class="separator">·</span><li><a class="no-style" title="PSN" href="https://my.playstation.com/profile/Bristle2tail" target="_blank"><i class="fab fa-playstation"></i>PSN</a></li><span class="separator">·</span><li><a class="no-style" title="BattleNet" href="https://d3.blizzard.cn/profile/sourbell-5971" target="_blank"><i class="fab fa-battle-net"></i>BattleNet</a></li></ul>
                     </nav>
                 </div>
             </header>
@@ -86,18 +80,18 @@
                 </a>
                 
                 
-                <span class="leancloud_visitors"> · <i class="leancloud-visitors-count"></i> Views</span>
+                <span class="leancloud_visitors" 
+                    id="/archives/2020-10/" 
+                    data-flag-title="2020-10 Moments"> · <i class="leancloud-visitors-count"></i> Views</span>
                 
             </span>
             <div class="ga-content_body">
                 <ul>
-<li><p>Tech</p>
-<ul>
+<li><p>Tech</p><ul>
 <li>理解 JavaScript 中的 <a href="https://www.taniarascia.com/javascript-modules-import-export/">Modules、Import 和 Export</a>，写得超棒。</li>
 </ul>
 </li>
-<li><p>其他</p>
-<ul>
+<li><p>其他</p><ul>
 <li>参加哥哥学校的护苗队第三个月了，组织群里每天到了放学时间段就会直播不文明现象，然后一群人你一言我一语，有提议拍照发到班级群，有提议直接举报到交警，罚钱了就不敢这样了。我想提出异议又担心一群人转头攻击我，组织者说自己是信佛的，为啥不能够引导一下大家的行为模式呢，说到底我们只是志愿者而不是执法者啊。</li>
 </ul>
 </li>
@@ -134,18 +128,7 @@
     
         <script>
             var initValine = function () {
-                new Valine({
-                    el: '#vcomments',
-                    appId: 'X5qiy62TtnWiqWRM7tnsnrnl-9Nh9j0Va',
-                    appKey: 'ERjI9kNprFRou6YbfXyftEG5',
-                    placeholder: '',
-                    notify: ,
-                    visitor: True,
-                    
-                    serverURLs: '',
-                    
-                    recordIP: True
-                });
+                new Valine({"enable": true, "el": "#vcomments", "appId": "X5qiy62TtnWiqWRM7tnsnrnl-9Nh9j0Va", "appKey": "ERjI9kNprFRou6YbfXyftEG5", "visitor": "True", "recordIP": true});
             }
         </script>
         <script defer src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js' onload="initValine()"></script>
@@ -176,55 +159,13 @@
                     <script>
                         var site_build_date = "2020-08-21T12:19+08:00"
                     </script>
-                    <script src="https://cdn.jsdelivr.net/gh/sourbell/meme.github.io@gh-pages/assets/galileo-d8a0a06eff.js"></script>
+                    <script src="https://cdn.jsdelivr.net/gh/sourbell/meme.github.io@gh-pages/assets/galileo-7c8cea54ab.js"></script>
                 </footer>
             </div>
         </div>
     </div>
-        
-        
-        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="pswp__bg"></div>
-        <div class="pswp__scroll-wrap">
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-            <div class="pswp__ui pswp__ui--hidden">
-                <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div>
-                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                    <button class="pswp__button pswp__button--share" title="Share"></button>
-                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                          <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div> 
-                </div>
-                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-                </button>
-                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-                </button>
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/gh/sourbell/meme.github.io@gh-pages/assets/ExSearch/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/sourbell/meme.github.io@gh-pages/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
-    
     <!--katex-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sourbell/meme.github.io@gh-pages/assets/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/gh/sourbell/meme.github.io@gh-pages/assets/katex.min.js"></script>
     <script>
     mathOpts = {
@@ -237,6 +178,9 @@
     };
     </script>
     <script defer src="https://cdn.jsdelivr.net/gh/sourbell/meme.github.io@gh-pages/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/sourbell/meme.github.io@gh-pages/assets/ExSearch/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/sourbell/meme.github.io@gh-pages/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
 
     
     </body>
